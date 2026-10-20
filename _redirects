@@ -1,3 +1,0 @@
-# Everything on the bare domain goes to the real site, keeping the path and the query string.
-# "301!" = permanent and forced (it also wins over index.html). Keep this rule last if more rules are added.
-/*  https://www.upaction.pro/:splat  301!

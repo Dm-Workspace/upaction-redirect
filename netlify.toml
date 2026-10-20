@@ -1,3 +1,0 @@
-# No build: the folder itself is published.
-[build]
-  publish = "."

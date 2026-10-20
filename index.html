@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UpAction</title>
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://www.upaction.pro/">
 <link rel="canonical" href="https://www.upaction.pro/">
+<meta http-equiv="refresh" content="0; url=https://www.upaction.pro/">
+<script>
+// The target host is fixed; only the path, query and hash of the visit are appended (so it can never leave www.upaction.pro).
+location.replace('https://www.upaction.pro' + location.pathname + location.search + location.hash);
+</script>
 </head>
 <body>
-<!-- Fallback only: the forced 301 in _redirects answers first. -->
 <p><a href="https://www.upaction.pro/">UpAction</a></p>
 </body>
 </html>
