@@ -1,0 +1,12 @@
+# upaction.pro (the bare domain) -> https://www.upaction.pro
+# Permanent redirect (301); the path and the query string of the visit are kept (the browser keeps the #hash itself).
+# One hop even for http:// visitors. The target host is fixed, so this can never lead anywhere else.
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # Let's Encrypt (certificate issue and renewal) must be answered by THIS server, not redirected.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+  RewriteRule ^(.*)$ https://www.upaction.pro/$1 [R=301,L,NE]
+</IfModule>
